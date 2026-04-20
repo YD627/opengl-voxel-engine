@@ -1,80 +1,56 @@
-\# OpenGL Voxel Engine \& Shadow Mapping Demo
+OpenGL 体素引擎与阴影映射演示
 
 
+一个基于 C++、从零开始使用 OpenGL 3.3 构建的体素引擎。该项目演示了高级图形编程概念，包括实时阴影映射、层次化角色动画和体素地形生成。
 
-!\[Project Screenshot](screenshots/demo.png) 
+🚀 功能特性
 
-\*(请在这里替换为你实际截图的路径)\*
+• 渲染引擎: 基于核心模式 (Core Profile) 的 OpenGL 3.3 渲染器
 
+• 阴影映射: 实现了方向光阴影映射，采用 PCF (百分比渐进过滤) 实现软阴影，并通过偏移调整防止阴影失真 (shadow acne)
 
+• 地形系统: 程序化生成"空岛"风格地形，包含多种体素类型（草地、泥土、石头、矿石）
 
-A C++ based voxel engine built from scratch using OpenGL 3.3. This project demonstrates advanced graphics programming concepts including real-time shadow mapping, hierarchical character animation, and voxel terrain generation.
+• 物理与碰撞: AABB (轴对齐包围盒) 碰撞检测、重力模拟以及用于方块选择的射线投射
 
+• 角色动画: 为机器人角色设计了层次化模型，并实现了程序化的行走动画（肢体摆动）
 
+• 摄像机系统: 支持第一人称、第三人称和自由漫游三种摄像机模式
 
-\## 🚀 Features
+• 视觉效果: 基于距离的线性雾效和动态昼夜循环计算
 
+🛠️ 技术栈
 
+• 语言: C++
 
-\* \*\*Render Engine\*\*: Core Profile OpenGL 3.3 renderer.
+• 图形API: OpenGL 3.3
 
-\* \*\*Shadow Mapping\*\*: Implemented directional shadow mapping with \*\*PCF (Percentage-Closer Filtering)\*\* for soft shadows and bias adjustment to prevent shadow acne.
+• 库/工具:
 
-\* \*\*Terrain System\*\*: Procedural generation of "Skyblock" style islands with voxel types (Grass, Dirt, Stone, Ores).
+  • GLFW (窗口管理与输入)
 
-\* \*\*Physics \& Collision\*\*: AABB (Axis-Aligned Bounding Box) collision detection, gravity simulation, and ray-casting for block selection.
+  • GLAD (OpenGL 加载器)
 
-\* \*\*Character Animation\*\*: Hierarchical modeling for the robot character with procedural walking animation (limb swinging).
+  • GLM (数学库)
 
-\* \*\*Camera System\*\*: Support for First-Person, Third-Person, and Free-Roaming camera modes.
+  • stb_image (纹理加载)
 
-\* \*\*Visual Effects\*\*: Distance-based linear fog and dynamic day/night cycle calculations.
+📂 项目结构
 
+• src/: 主要源代码
 
+• shaders/: GLSL 顶点和片段着色器
 
-\## 🛠️ Tech Stack
+• assets/: 纹理和精灵图资源
 
+🎮 操作控制
 
+• W/A/S/D: 移动角色 / 摄像机
 
-\* \*\*Language\*\*: C++
+• 空格键: 跳跃
 
-\* \*\*Graphics API\*\*: OpenGL 3.3
+• 鼠标: 环顾四周
 
-\* \*\*Libraries\*\*:
+• V: 切换摄像机模式 (第一人称/第三人称/自由)
 
-&nbsp;   \* `GLFW` (Windowing \& Input)
-
-&nbsp;   \* `GLAD` (OpenGL Loader)
-
-&nbsp;   \* `GLM` (Mathematics)
-
-&nbsp;   \* `stb\_image` (Texture Loading)
-
-
-
-\## 📂 Project Structure
-
-
-
-\* `src/`: Main source code.
-
-\* `shaders/`: GLSL vertex and fragment shaders.
-
-\* `assets/`: Textures and sprites.
-
-
-
-\## 🎮 Controls
-
-
-
-\* \*\*W/A/S/D\*\*: Move Character / Camera
-
-\* \*\*Space\*\*: Jump
-
-\* \*\*Mouse\*\*: Look around
-
-\* \*\*V\*\*: Switch Camera Mode (First/Third/Free)
-
-\* \*\*I/K/J/L/U/O\*\*: Interact with the Chest object (Move/Rotate)
-
+• I/K/J/L/U/O: 与箱子物体交互 (移动/旋转)
